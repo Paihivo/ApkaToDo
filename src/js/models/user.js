@@ -24,8 +24,10 @@ const User = mongoose.model('User',new mongoose.Schema({
     unique: true,
 	trim: true
   },
-	
-})
+  {
+	  timestamps:true
+  }
+}))
 
 function validateUser(user) {
   const schema = {
