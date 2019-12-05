@@ -20,4 +20,15 @@ router.post('/register', async (req, res)=>{
 	
 });
 
-router.put('/me', );
+router.put('/me',async (req, res)=>{
+	const {error} = validate(req.body);
+	if (error) return res.status(400).send(error.details[0].message);
+	
+	const user=await User.update (req.params{
+	name: req.body.name,
+	last-name: req.body.last-name,
+	email: req.body.email
+	}, 
+	{new:true });
+	
+	res.send(user) });
