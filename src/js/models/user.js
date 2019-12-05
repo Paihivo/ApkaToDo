@@ -31,7 +31,7 @@ function validateUser(user) {
   const schema = {
     name: Joi.string().min(5).max(50).required().trim(),
 	last-name: Joi.string().min(5).max(50).required().trim(),
-    email: Joi.string().min(5).max(255).required().email()
+    email: Joi.string().min(5).max(255).required().email() 
   };
 
 exports.User = User;
