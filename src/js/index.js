@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
 const Joi = require('joi');
 const express = require('express');
-const task = require('./routes/task')
+const task = require('./routes/task');
+const task = require('./routes/user');
 
 const app = express();
 
@@ -14,3 +15,4 @@ app.listen(port, () => console.log(`Listening on port ${port}...`));
 
 app.use(express.json());
 app.use('/api/task', task);
+app.use('/api/user', user);

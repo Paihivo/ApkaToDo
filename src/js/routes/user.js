@@ -32,3 +32,5 @@ router.put('/me',async (req, res)=>{
 	{new:true });
 	
 	res.send(user) });
+	
+	module.exports = router;
