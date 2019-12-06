@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Joi = require('joi');
 const express = require('express');
 const task = require('./routes/task');
-const task = require('./routes/user');
+const user = require('./routes/user');
 
 const app = express();
 

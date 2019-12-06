@@ -12,7 +12,7 @@ router.post('/register', async (req, res)=>{
 	
 	let user=new User ({
 	name: req.body.name,
-	last-name: req.body.last-name,
+	lastname: req.body.lastname,
 	email: req.body.email
 	});
 	user= await user.save();
@@ -26,7 +26,7 @@ router.put('/me',async (req, res)=>{
 	
 	const user=await User.update (req.params,{
 	name: req.body.name,
-	last-name: req.body.last-name,
+	lastname: req.body.lastname,
 	email: req.body.email
 	}, 
 	{new:true });

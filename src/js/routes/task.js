@@ -44,8 +44,13 @@ router.put('/:id', async (req, res) => {
   res.send(task);
 });
 
+//////////////////////////////////////////////////////
 
-
-
+/*
+   router.get('/',  async (req, res) {
+        const tasks = await Task.find().sort( WSTAWIĆ DATE'desc' );   //'asc' sortowanie rosn
+       res.send( tasks);
+    },
+*/
 module.exports = router;
 
