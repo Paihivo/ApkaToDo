@@ -32,5 +32,13 @@
   "dependencies": {
     "babel-polyfill": "^6.26.0",
     "express": "^4.17.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Paihivo/ApkaToDo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Paihivo/ApkaToDo/issues"
+  },
+  "homepage": "https://github.com/Paihivo/ApkaToDo#readme"
 }

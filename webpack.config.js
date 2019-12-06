@@ -3,7 +3,7 @@ const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-    entry: ['babel-polyfill', './src/js/app.js'],
+    entry: ['babel-polyfill', './src/frontend/js/app.js'],
     output: {
         path: path.resolve(__dirname),
         filename: 'bundle.js'
@@ -14,7 +14,7 @@ module.exports = {
 	plugins: [
         new webpack.ProgressPlugin(),
         new HtmlWebpackPlugin({
-            template: "./src/index.html"
+            template: "./src/frontend/index.html"
         })
     ],
     module: {
