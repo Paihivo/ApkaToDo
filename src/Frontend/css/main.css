@@ -1,12 +1,139 @@
-body {
-    background-image: url(../img/pen.png);
-    background-size: cover;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  background-color: rgb(243, 243, 243);
+  width: 100%;
+  height: 100%;
+  min-width: 300px;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+#navbar{
+  position: fixed;
+  min-width: 30px;
+}
+#navbar .title{
+  font-size: 2em;
+  font-weight: 500;
+  margin: 0 20px;
+  padding: 40px 0;
+  font-family: 'Solway', serif;
+}
+.search {
+  height: 3rem;
+  margin: 20px;
+  width: 60%;
+  border: 1px solid #6447f4;
+  background-color: transparent;
+}
+.search[type=text] {
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+.submitTask {
+    height: 3rem;
+    border: 1px solid #6447f4;
+    background-color: #6447f4;
+    color: #fff;
+    width: 20%;
+    font-size: 1.5em;
+}
+.submitTask:hover {
+  border: 1px solid #8e38a6;
+  background-color: #8e38a6;
+  transition: 0.3s ease-in-out;
+}
 
-.Front {
+ul {
+  width: 100%;
+}
+#navbar .nav-item{
+  margin: 0 10px;
+  font-size: 1.5em;
+  list-style: none;
+}
+.nav-link{
+  color: #454549;
+}
+.nav-link:hover{
+  color: #000;
+  font-weight: 600;
+  background-color: #ebebeb;
+}
+.icon {
+  margin-right: 15px;
+  color: #8e38a6;
+  font-size: 1em;
+}
+.icon:hover {
+  color: #6447f4;
+}
+#main-doc{
+  height: 100vh;
+  padding: 2.5em 3em 3em;
+  border-left: 1px solid #ebebeb;
+}
+.title-region {
+  height: 200px;
+  background-color: #8e38a6; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to bottom right, #8e38a6, #6447f4); /* Standard syntax (must be last) */
+  font-size: 3em;
+  color: #fff;
+  font-weight: 500;
+  padding: 100px 0 0 30px;
+}
+.bar1, .bar2, .bar3 {
+  display: none;
+}
+@media only screen and (max-width: 575px){
+  #main-doc{
+      margin: 0 5%;
+  }
+  #navbar{
+      width: 100%;
+      position: relative;
+  }
+  .navbar-movil{
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 5% 5% 3% 5%;
+  }
+  .navbar-toggler {
+      color: #454549;
+      border-color: #9393953b; 
+  }
+  .navbar-toggler-icon {
+      padding: 1px 4px;
+      font-weight: 300;
+  }
+  #navbar .title{
+      font-size: 1.5em;
+      padding-top: 0%;
+      padding-left: 2%; 
+  }
+  #navbar li {
+      margin: 0 13%;
+  }
+  #navbar i {
+      color:#454549;;
+  }
+  .title-region {
+    padding: 20px 0;
+    font-size: 1.5em;
     text-align: center;
-    font-size: 4rem;
-    font-family: 'Solway', serif;
-    color: brown;
-    margin: 10px;
+    height: auto;
+  }
+  .bar1, .bar2, .bar3 {
+    display: block;
+    width: 35px;
+    height: 5px;
+    background-color: var(--onecolor);
+    margin: 6px 0;
+    transition: 0.4s;
+  }
 }
