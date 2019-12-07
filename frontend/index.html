@@ -1,55 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="./src/css/main.css"> 
+    <link href="https://fonts.googleapis.com/css?family=Solway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+            integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <title>The Greatest To Do App</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="./src/css/main.css" />
-  </head>
-  <body>
-    <header>
-      <div class="Front">
-        <p>The Greatest To Do App</p>
-      </div>
-    </header>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
-          <div class="card card-signin my-5">
-            <div class="card-body">
-              <h5 class="card-title text-center">Sign In</h5>
-              <div class="form-signin">
-                <div class="form-label-group">
-                  <input
-                    type="email"
-                    id="inputEmail"
-                    class="form-control"
-                    placeholder="Email address"
-                    required
-                    autofocus
-                  />
-                  <label for="inputEmail">Email address</label>
-                </div>
-
-                <div class="form-label-group">
-                  <input type="password" id="inputPassword" class="form-control" placeholder="Password" required />
-                  <label for="inputPassword">Password</label>
-                </div>
-                <div class="form-label-group" id="confirm-passoword"></div>
-                <div class="register-new-account">
-                  <a href="/src/frontend/views/register.html">Register a new account</a>
-                </div>
-                <button id="loginBtn" class="btn btn-lg btn-primary btn-block text-uppercase">
-                  Sign in
-                </button>
-              </div>
-            </div>
+    
+</head>
+<body>
+  <div class="page-wrap">
+    <div class="row">
+      <div class="col-xl-2 col-lg-3 col-md-4 col-sm-5">
+        <nav id="navbar" class="navbar-movil navbar-expand-sm">
+          <header class="title">The Greatest To Do App</header>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navMini" aria-controls="navMini" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+          </button>
+          <hr>
+          <input type="text" class="search" />
+          <button type="button" class="searchBtn"><i class="fas fa-search"></i></button>
+          <hr>
+          <div class="collapse navbar-collapse" id="navMini">
+          <ul>
+            <li class="nav-item"><a href="" class="nav-link" id="accountBtn">
+              <span class="icon">
+                <i class="fas fa-user-lock"></i>
+              </span>Account</a>
+            </li>
+            <hr>
+            <li class="nav-item"><a href="" class="nav-link" id="dayBtn">
+              <span class="icon">
+                <i class="far fa-star"></i>
+              </span>My day</a>
+            </li>
+            <li class="nav-item"><a href="" class="nav-link" id="tasksBtn">
+              <span class="icon">
+                <i class="fas fa-tasks"></i>
+              </span>Tasks</a>
+            </li>
+            <li class="nav-item"><a href="" class="nav-link" id="importantBtn">
+              <span class="icon">
+                <i class="far fa-calendar-check"></i></i>
+              </span>Important tasks</a>
+            </li>
+            <hr>
+            <li class="nav-item"><a href="" class="nav-link" id="calendarBtn">
+              <span class="icon">
+                <i class="fas fa-calendar-alt"></i>
+              </span>Calendar</a>
+            </li>
+          </ul>
           </div>
-        </div>
+        </nav>
+      </div>
+      <div class="col-xl-10 col-lg-9 col-md-8 col-sm-7">
+      <section class="title-region">The Greatest To Do App</section>
+        <main id="main-doc">
+          <section id="account-region"></section>
+          <section id="day-region"></section>
+          <section id="tasks-region"></section>
+          <section id="important-region"></section>
+          <section id="calendar-region"></section>
+        </main>
       </div>
     </div>
-    <script src="./dist/main.bundle.js"></script>
-  </body>
+  </div>
+  <script src="./dist/main.bundle.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+</body>
 </html>
