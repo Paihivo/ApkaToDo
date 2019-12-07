@@ -1,10 +1,10 @@
-import "../css/main.css";
-import { login } from "./shared/login.js";
-import { register } from "./shared/register.js";
+import '../css/main.css';
+import { login } from './shared/login';
+import { register } from './shared/register';
 
 const init = () => {
-  const loginBtn = document.querySelector("#loginBtn");
-  loginBtn.addEventListener("click", login);
+  const loginBtn = document.querySelector('#loginBtn');
+  loginBtn.addEventListener('click', login);
 };
 
 init();
