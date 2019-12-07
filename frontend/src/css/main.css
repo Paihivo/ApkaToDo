@@ -1,0 +1,12 @@
+body {
+    background-image: url(../img/pen.png);
+    background-size: cover;
+  }
+
+.Front {
+    text-align: center;
+    font-size: 4rem;
+    font-family: 'Solway', serif;
+    color: brown;
+    margin: 10px;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Solway&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="/src/frontend/js/shared/register.js"></script> 
+    <title>The Greatest To Do App</title>
+
+</head>
+
+<body>
+    <header>
+        <div class="Front">
+            <p>The Greatest To Do App</p>
+        </div>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+                <div class="card card-signin my-5">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Sign In</h5>
+                        <div class="form-signin">
+                            <div class="form-label-group">
+                                <input type="email" id="inputEmail" class="form-control" placeholder="Email address"
+                                    required autofocus>
+                                <label for="inputEmail">Email address</label>
+                            </div>
+
+                            <div class="form-label-group">
+                                <input type="password" id="inputPassword" class="form-control" placeholder="Password"
+                                    required>
+                                <label for="inputPassword">Password</label>
+                            </div>
+                            <div class="form-label-group">
+                                <input type="password" id="confirmInputPassword" class="form-control"
+                                    placeholder="Confirm password" required>
+                                <label for="confirmInputPassword">Confirm password</label>
+                            </div>
+                            <div class="form-label-group" id="confirm-passoword">
+                            </div>
+                            <a href="/">Already have an account? Sign in</a>
+                            <button id="registerBtn" onclick="register()" class="btn btn-lg btn-primary btn-block text-uppercase">Register
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
