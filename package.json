@@ -1,38 +1,24 @@
 {
-  "name": "apkatodolist",
+  "name": "back-end",
   "version": "1.0.0",
-  "description": "The Greatest To Do App In The World",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --mode development --watch",
-    "build": "webpack --mode production",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "live": "webpack-dev-server --inline --hot"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "browserslist": [
-    "last 1 version",
-    "> 1%"
-  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Paihivo/ApkaToDo.git"
+  },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "@babel/core": "^7.7.4",
-    "@babel/preset-env": "^7.7.4",
-    "babel-loader": "^8.0.6",
-    "css-loader": "^3.2.0",
-    "file-loader": "^4.3.0",
-    "html-loader": "^0.5.5",
-    "html-webpack-plugin": "^3.2.0",
-    "moment": "^2.24.0",
-    "style-loader": "^1.0.0",
-    "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.10",
-    "webpack-dev-server": "^3.9.0"
+  "bugs": {
+    "url": "https://github.com/Paihivo/ApkaToDo/issues"
   },
+  "homepage": "https://github.com/Paihivo/ApkaToDo#readme",
   "dependencies": {
-    "babel-polyfill": "^6.26.0",
     "express": "^4.17.1",
     "joi": "^14.3.1",
-    "mongoose": "^5.7.13"
+    "mongoose": "^5.7.14"
   }
 }
