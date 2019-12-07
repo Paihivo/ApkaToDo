@@ -1,12 +1,17 @@
+@import './resets.css';
+
+/* import fonts here */
+@import url('https://fonts.googleapis.com/css?family=Solway&display=swap');
+
 body {
-    background-image: url(../img/pen.png);
-    background-size: cover;
-  }
+  background-image: url(../img/pen.png);
+  background-size: cover;
+}
 
 .Front {
-    text-align: center;
-    font-size: 4rem;
-    font-family: 'Solway', serif;
-    color: brown;
-    margin: 10px;
+  text-align: center;
+  font-size: 4rem;
+  font-family: 'Solway', serif;
+  color: brown;
+  margin: 10px;
 }

@@ -1,4 +1,3 @@
-import '../css/main.css';
 import { login } from './shared/login';
 import { register } from './shared/register';
 
@@ -7,4 +6,4 @@ const init = () => {
   loginBtn.addEventListener('click', login);
 };
 
-init();
+export default init;
