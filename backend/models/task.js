@@ -9,6 +9,13 @@ const Task = mongoose.model('Task', new mongoose.Schema(
       minlength: 3,
       maxlenght: 50
     },
+    deadline: {
+      type: Date
+    },     
+    created: {
+      type: Date,
+      default: new Date()
+    },
     done: {
       type: Boolean,
       default: false
@@ -19,6 +26,7 @@ const Task = mongoose.model('Task', new mongoose.Schema(
 const validateTask = (task) => {
   const schema = {
     description: Joi.string().min(3).max(50).required(),
+    deadline: Joi.date()
   }
   return Joi.validate(task, schema);
 }

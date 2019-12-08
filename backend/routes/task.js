@@ -4,7 +4,7 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/', async (req, res) => {
-  const tasks = await Task.find()
+  const tasks = await Task.find().sort('-deadline')
   res.send(tasks)
 });
 
@@ -12,7 +12,7 @@ router.post('/', async (req, res) => {
   const {error} = validate(req.body);
   if (error) return res.status(400).send(error.details[0].message);
 
-  let task = new Task({ description: req.body.description });
+  let task = new Task({ description: req.body.description, deadline: req.body.deadline });
   task = await task.save();
   res.send(task)
 });
@@ -44,13 +44,5 @@ router.put('/:id', async (req, res) => {
   res.send(task);
 });
 
-//////////////////////////////////////////////////////
-
-/*
-   router.get('/',  async (req, res) {
-        const tasks = await Task.find().sort( WSTAWIĆ DATE'desc' );   //'asc' sortowanie rosn
-       res.send( tasks);
-    },
-*/
 module.exports = router;
 

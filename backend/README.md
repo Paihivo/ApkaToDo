@@ -23,6 +23,11 @@
 #### task router `/api/task`
 1. GET: `/` to get all tasks.
 2. POST: `/` do add a task.
+    Body raw JSON:
+    {
+      "description": "<String>",
+      "deadline": "<YYYY-MM-DD>"
+    }
 3. GET: `/:id` to get particular task.
 4. DELETE: `/:id` to delete particular task.
 5. PUT: `/id` to edit particular task.
