@@ -20,5 +20,9 @@
     "express": "^4.17.1",
     "joi": "^14.3.1",
     "mongoose": "^5.7.14"
+  },
+  "devDependencies": {
+    "node": "^13.3.0",
+    "nodemon": "^2.0.1"
   }
 }
