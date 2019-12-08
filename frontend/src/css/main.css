@@ -3,15 +3,137 @@
 /* import fonts here */
 @import url('https://fonts.googleapis.com/css?family=Solway&display=swap');
 
-body {
-  background-image: url(../img/pen.png);
-  background-size: cover;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-.Front {
-  text-align: center;
-  font-size: 4rem;
-  font-family: 'Solway', serif;
-  color: brown;
-  margin: 10px;
+:root {
+  --black: #000;
+  --whitecolor: #fff;
+  --onecolor: #6447f4;
+  --twocolor: #8e38a6;
+  --graycolor: #ebebeb;
+  --main-font: 'Solway', serif;
+  --bigfont: 3em;
+  --mediumfont: 2em;
+  --smallfont: 1.5em;
+  --vsmallfont: 1em;
+}
+html, body {
+  background-color: rgb(243, 243, 243);
+  min-width: 300px;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+#navbar{
+  position: fixed;
+}
+.title{
+  font-size: var(--mediumfont);
+  font-weight: 500;
+  margin: 0 20px;
+  padding: 40px 0;
+  font-family: var(--main-font);
+}
+.search {
+  height: 3rem;
+  margin: 20px;
+  width: 70%;
+  border: 1px solid var(--onecolor);
+  background-color: transparent;
+}
+.search[type=text] {
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+.searchBtn {
+  height: 3rem;
+  border: 1px solid var(--onecolor);
+  background-color: var(--onecolor);
+  color: var(--whitecolor);
+  width: 15%;
+  font-size: var(--vsmallfont);
+}
+.searchBtn:hover {
+  border: 1px solid var(--twocolor);
+  background-color: var(--twocolor);
+  transition: 0.3s ease-in-out;
+}
+ul {
+  width: 100%;
+}
+.nav-item{
+  margin: 0 10px;
+  font-size: var(--smallfont);
+  list-style: none;
+}
+.nav-link{
+  color: #454549;
+}
+.nav-link:hover{
+  color: var(--blackcolor);
+  font-weight: 600;
+  background-color: var(--graycolor);
+}
+.icon {
+  margin-right: 15px;
+  color: var(--twocolor);
+  font-size: var(--vsmallfont);
+}
+.icon:hover {
+  color: var(--onecolor);
+}
+#main-doc{
+  height: 100vh;
+  padding: 2.5em 3em 3em;
+  border-left: 1px solid var(--graycolor);
+}
+.title-region {
+  height: 266px;
+  background-color: #8e38a6; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to bottom right, var(--twocolor), var(--onecolor)); /* Standard syntax (must be last) */
+  font-size: var(--bigfont);
+  color: var(--whitecolor);
+  font-weight: 500;
+  padding: 150px 0 0 30px;
+}
+@media only screen and (max-width: 575px){
+  #main-doc{
+    margin: 0 5%;
+    border: none;
+  }
+  #navbar{
+    width: 100%;
+    position: relative;
+  }
+  .navbar-movil{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .navbar-toggler {
+    color: var(--onecolor);
+  }
+  .navbar-toggler-icon {
+    font-size: var(--smallfont);
+    padding-top: 10px;
+  }
+  .title{
+    font-size: var(--vsmallfont);
+    padding: 10px;
+  }
+  .search {
+    margin: 20px 10px;
+  }
+  #navbar li {
+    margin: 0 5%;
+  }
+  .title-region {
+    padding: 20px 0;
+    font-size: var(--smallfont);
+    text-align: center;
+    height: auto;
+  }
 }
