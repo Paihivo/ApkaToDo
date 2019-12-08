@@ -1,3 +1,4 @@
+import clearRegions from './clear';
 export default function login() {
   const inputEmail = document.getElementById('inputEmail');
   const inputPassword = document.getElementById('inputPassword');
@@ -7,6 +8,8 @@ export default function login() {
 
   account.addEventListener('click', e => {
     e.preventDefault();
+    clearRegions();
+  
     const logView = `
       <div class="container">
         <div class="row">
