@@ -26,9 +26,9 @@ html, body {
   line-height: 1.5;
   overflow-x: hidden;
 }
-#navbar{
+/*#navbar{
   position: fixed;
-}
+}*/
 .title{
   font-size: var(--mediumfont);
   font-weight: 500;
@@ -86,7 +86,7 @@ ul {
 }
 #main-doc{
   height: 100vh;
-  padding: 2.5em 3em 3em;
+  padding: 1em 1em 1em;
   border-left: 1px solid var(--graycolor);
 }
 .title-region {
@@ -97,6 +97,18 @@ ul {
   color: var(--whitecolor);
   font-weight: 500;
   padding: 150px 0 0 30px;
+}
+.navbar-content{
+  position: fixed;
+  padding-right: 0px;
+}
+.main-content{
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  padding-left: 0px;
 }
 @media only screen and (max-width: 575px){
   #main-doc{
@@ -135,5 +147,9 @@ ul {
     font-size: var(--smallfont);
     text-align: center;
     height: auto;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 840px){
+  .title-region {
   }
 }
