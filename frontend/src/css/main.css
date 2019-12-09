@@ -36,9 +36,15 @@ html, body {
   padding: 40px 0;
   font-family: var(--main-font);
 }
+.navbar-search{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+}
 .search {
   height: 3rem;
-  margin: 20px;
+  margin: 20px 0px 20px 20px;
   width: 70%;
   border: 1px solid var(--onecolor);
   background-color: transparent;
@@ -98,32 +104,40 @@ ul {
   font-weight: 500;
   padding: 150px 0 0 30px;
 }
-.navbar-content{
-  position: fixed;
-  padding-right: 0px;
-}
 .main-content{
   position: absolute;
   top: 0;
   right: 0;
   margin: 0;
   padding: 0;
-  padding-left: 0px;
 }
-@media only screen and (max-width: 575px){
+@media only screen and (max-width: 576px){
   #main-doc{
     margin: 0 5%;
     border: none;
   }
+  .main-content{
+    position: static;
+  }
+  .navbar-content{
+    position: static;
+  }/*
   #navbar{
     width: 100%;
     position: relative;
-  }
-  .navbar-movil{
+  }*/
+  .navbar-mobile{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+  }
+  .navbar-search{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
   }
   .navbar-toggler {
     color: var(--onecolor);
@@ -137,7 +151,8 @@ ul {
     padding: 10px;
   }
   .search {
-    margin: 20px 10px;
+    width: 200px;
+
   }
   #navbar li {
     margin: 0 5%;
@@ -151,5 +166,7 @@ ul {
 }
 @media only screen and (min-width: 576px) and (max-width: 840px){
   .title-region {
+    padding: 40px;
+    text-align: center;
   }
 }
