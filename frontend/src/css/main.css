@@ -20,7 +20,13 @@
   --smallfont: 1.5em;
   --vsmallfont: 1em;
 }
-html, body {
+
+html {
+  font-size: 16px;
+}
+
+html,
+body {
   background-color: rgb(243, 243, 243);
   min-width: 300px;
   line-height: 1.5;
@@ -49,7 +55,7 @@ html, body {
   border: 1px solid var(--onecolor);
   background-color: transparent;
 }
-.search[type=text] {
+.search[type='text'] {
   padding: 0 10px;
   box-sizing: border-box;
 }
@@ -69,15 +75,15 @@ html, body {
 ul {
   width: 100%;
 }
-.nav-item{
+.nav-item {
   margin: 0 10px;
   font-size: var(--smallfont);
   list-style: none;
 }
-.nav-link{
+.nav-link {
   color: #454549;
 }
-.nav-link:hover{
+.nav-link:hover {
   color: var(--blackcolor);
   font-weight: 600;
   background-color: var(--graycolor);
@@ -90,7 +96,7 @@ ul {
 .nav-item:hover.icon {
   color: var(--onecolor);
 }
-#main-doc{
+#main-doc {
   height: 100vh;
   padding: 1em 1em 1em;
   border-left: 1px solid var(--graycolor);
@@ -98,7 +104,11 @@ ul {
 .title-region {
   height: 266px;
   background-color: #8e38a6; /* For browsers that do not support gradients */
-  background-image: linear-gradient(to bottom right, var(--twocolor), var(--onecolor)); /* Standard syntax (must be last) */
+  background-image: linear-gradient(
+    to bottom right,
+    var(--twocolor),
+    var(--onecolor)
+  ); /* Standard syntax (must be last) */
   font-size: var(--bigfont);
   color: var(--whitecolor);
   font-weight: 500;
@@ -152,7 +162,7 @@ ul {
     font-size: var(--smallfont);
     padding-top: 10px;
   }
-  .title{
+  .title {
     font-size: var(--vsmallfont);
     padding: 10px;
   }
@@ -175,4 +185,36 @@ ul {
     padding: 40px;
     text-align: center;
   }
+}
+
+.region {
+  display: flex;
+  justify-content: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.form__input,
+.form__label {
+  width: 18.75rem;
+}
+
+.form__input {
+  padding: 0.3125rem 0.625rem;
+  border-radius: 0.25rem;
+  border: 1px solid var(--black);
+  margin-bottom: 0.625rem;
+  height: 2.5rem;
+}
+
+.button {
+  text-transform: uppercase;
+  background-color: var(--onecolor);
+  color: var(--whitecolor);
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;
 }
