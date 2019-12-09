@@ -2,8 +2,7 @@
 ## Back-end
 
 ### Project settings:
-1. Modules: express, joi, mongoose
-2. Eslint: `npm run lint` 
+1. Eslint: `npm run lint` 
 
 ### Connecting:
 1.  Type `nodemon` in a console to automatically restart the node application when file changes in the directory are detected. It will connect to port 3000 and the MongoDB database.
