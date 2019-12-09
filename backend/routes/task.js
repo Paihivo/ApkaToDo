@@ -1,5 +1,5 @@
+const { User } = require('../models/user');
 const { Task, validate } = require('../models/task'); 
-const mongoose = require('mongoose');
 const express = require('express');
 const router = express.Router();
 
@@ -12,7 +12,19 @@ router.post('/', async (req, res) => {
   const {error} = validate(req.body);
   if (error) return res.status(400).send(error.details[0].message);
 
-  let task = new Task({ description: req.body.description, deadline: req.body.deadline });
+  let user = await User.findById(req.body.userId);
+  if (!user) return res.status(400).send('Invalid user');
+
+  let task = new Task({ 
+    user: {
+      _id: user._id,
+      name: user.name,
+      lastname: user.lastname,
+      email: user.email
+    },
+    description: req.body.description, 
+    deadline: req.body.deadline });
+  
   task = await task.save();
   res.send(task)
 });
