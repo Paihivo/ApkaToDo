@@ -26,9 +26,9 @@ html, body {
   line-height: 1.5;
   overflow-x: hidden;
 }
-#navbar{
+/*#navbar{
   position: fixed;
-}
+}*/
 .title{
   font-size: var(--mediumfont);
   font-weight: 500;
@@ -36,9 +36,15 @@ html, body {
   padding: 40px 0;
   font-family: var(--main-font);
 }
+.navbar-search{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+}
 .search {
   height: 3rem;
-  margin: 20px;
+  margin: 20px 0px 20px 20px;
   width: 70%;
   border: 1px solid var(--onecolor);
   background-color: transparent;
@@ -49,15 +55,15 @@ html, body {
 }
 .searchBtn {
   height: 3rem;
-  border: 1px solid var(--onecolor);
-  background-color: var(--onecolor);
+  border: 1px solid var(--twocolor);
+  background-color: var(--twocolor);
   color: var(--whitecolor);
   width: 15%;
   font-size: var(--vsmallfont);
 }
 .searchBtn:hover {
   border: 1px solid var(--twocolor);
-  background-color: var(--twocolor);
+  background-color: var(--onecolor);
   transition: 0.3s ease-in-out;
 }
 ul {
@@ -81,12 +87,12 @@ ul {
   color: var(--twocolor);
   font-size: var(--vsmallfont);
 }
-.icon:hover {
+.nav-item:hover.icon {
   color: var(--onecolor);
 }
 #main-doc{
   height: 100vh;
-  padding: 2.5em 3em 3em;
+  padding: 1em 1em 1em;
   border-left: 1px solid var(--graycolor);
 }
 .title-region {
@@ -98,20 +104,46 @@ ul {
   font-weight: 500;
   padding: 150px 0 0 30px;
 }
-@media only screen and (max-width: 575px){
+.main-content{
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+}
+.sign-in-btn{
+  background-color: var(--twocolor);
+}
+.sign-in-btn:hover{
+  background-color: var(--onecolor);
+}
+@media only screen and (max-width: 576px){
   #main-doc{
     margin: 0 5%;
     border: none;
   }
+  .main-content{
+    position: static;
+  }
+  .navbar-content{
+    position: static;
+  }/*
   #navbar{
     width: 100%;
     position: relative;
-  }
-  .navbar-movil{
+  }*/
+  .navbar-mobile{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+  }
+  .navbar-search{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
   }
   .navbar-toggler {
     color: var(--onecolor);
@@ -125,7 +157,8 @@ ul {
     padding: 10px;
   }
   .search {
-    margin: 20px 10px;
+    max-width: 200px;
+
   }
   #navbar li {
     margin: 0 5%;
@@ -135,5 +168,11 @@ ul {
     font-size: var(--smallfont);
     text-align: center;
     height: auto;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 840px){
+  .title-region {
+    padding: 40px;
+    text-align: center;
   }
 }
