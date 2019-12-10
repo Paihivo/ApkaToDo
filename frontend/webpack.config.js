@@ -1,10 +1,16 @@
 const { resolve } = require('path');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: {
-    main: './src/js/index.js',
-  },
+  entry: './src/js/index.js',
   mode: 'development',
+  plugins: [
+    new webpack.ProgressPlugin(),
+    new HtmlWebpackPlugin({
+      template: './index.html',
+    }),
+  ],
   module: {
     rules: [
       {

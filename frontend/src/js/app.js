@@ -1,10 +1,11 @@
-import login from './shared/login';
-// import register from './shared/register';
-import taskView from './shared/task';
+import { editAccount } from './shared/account';
 
 const init = () => {
-  login();
-  taskView();
+  const account = document.querySelector('#accountBtn');
+  account.addEventListener('click', e => {
+    e.preventDefault();
+    editAccount();
+  });
 };
 
 export default init;
