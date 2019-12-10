@@ -1,3 +1,4 @@
+import clearRegions from './clear';
 export default function login() {
   const inputEmail = document.getElementById('inputEmail');
   const inputPassword = document.getElementById('inputPassword');
@@ -7,6 +8,8 @@ export default function login() {
 
   account.addEventListener('click', e => {
     e.preventDefault();
+    clearRegions();
+  
     const logView = `
       <div class="container">
         <div class="row">
@@ -30,7 +33,7 @@ export default function login() {
                         <div class="register-new-account">
                             <p id="register-link">Register a new account</p>
                         </div>
-                        <button id="loginBtn" class="btn btn-lg btn-primary btn-block text-uppercase">Sign
+                        <button id="loginBtn" class="btn btn-lg btn-primary btn-block text-uppercase sign-in-btn">Sign
                             in</button>
                         </div>
                       </div>
