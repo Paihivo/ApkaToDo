@@ -33,7 +33,7 @@ export default function login() {
                         <div class="register-new-account">
                             <p id="register-link">Register a new account</p>
                         </div>
-                        <button id="loginBtn" class="btn btn-lg btn-primary btn-block text-uppercase">Sign
+                        <button id="loginBtn" class="btn btn-lg btn-primary btn-block text-uppercase sign-in-btn">Sign
                             in</button>
                         </div>
                       </div>

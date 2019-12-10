@@ -55,15 +55,15 @@ html, body {
 }
 .searchBtn {
   height: 3rem;
-  border: 1px solid var(--onecolor);
-  background-color: var(--onecolor);
+  border: 1px solid var(--twocolor);
+  background-color: var(--twocolor);
   color: var(--whitecolor);
   width: 15%;
   font-size: var(--vsmallfont);
 }
 .searchBtn:hover {
   border: 1px solid var(--twocolor);
-  background-color: var(--twocolor);
+  background-color: var(--onecolor);
   transition: 0.3s ease-in-out;
 }
 ul {
@@ -87,7 +87,7 @@ ul {
   color: var(--twocolor);
   font-size: var(--vsmallfont);
 }
-.icon:hover {
+.nav-item:hover.icon {
   color: var(--onecolor);
 }
 #main-doc{
@@ -110,6 +110,12 @@ ul {
   right: 0;
   margin: 0;
   padding: 0;
+}
+.sign-in-btn{
+  background-color: var(--twocolor);
+}
+.sign-in-btn:hover{
+  background-color: var(--onecolor);
 }
 @media only screen and (max-width: 576px){
   #main-doc{
@@ -151,7 +157,7 @@ ul {
     padding: 10px;
   }
   .search {
-    width: 200px;
+    max-width: 200px;
 
   }
   #navbar li {
@@ -164,7 +170,7 @@ ul {
     height: auto;
   }
 }
-@media only screen and (min-width: 576px) and (max-width: 840px){
+@media only screen and (min-width: 577px) and (max-width: 840px){
   .title-region {
     padding: 40px;
     text-align: center;
