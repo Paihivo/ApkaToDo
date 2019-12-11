@@ -7,6 +7,7 @@
 
 ### Scripts:
 1. `npm run dev` to create transpiled JavaScript bundle.
+2. `npm run start` to run live server
 
 ### Adding JavaScript:
 1. Create new JavaScript file.

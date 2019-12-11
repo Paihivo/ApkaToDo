@@ -19,6 +19,7 @@
   --mediumfont: 2em;
   --smallfont: 1.5em;
   --vsmallfont: 1em;
+  --red: #dc3545;
 }
 
 html {
@@ -195,7 +196,7 @@ ul {
 .form {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .form__input,
@@ -217,4 +218,8 @@ ul {
   color: var(--whitecolor);
   padding: 0.5rem 0.75rem;
   border-radius: 0.25rem;
+}
+
+.button__remove {
+  background: var(--red);
 }
