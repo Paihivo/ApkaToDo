@@ -1,5 +1,9 @@
 import { editAccount } from './shared/account';
+<<<<<<< HEAD
 import taskView from './shared/task';
+=======
+import { editTask } from './shared/edit-task';
+>>>>>>> Initial task edit modal
 
 const init = () => {
   taskView();
@@ -7,6 +11,11 @@ const init = () => {
   account.addEventListener('click', e => {
     e.preventDefault();
     editAccount();
+  });
+  const testButton = document.querySelector('#testBtn');
+  testButton.addEventListener('click', e => {
+    e.preventDefault();
+    editTask();
   });
 };
 
