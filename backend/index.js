@@ -1,4 +1,3 @@
-// const config = require('config');
 const mongoose = require('mongoose');
 const express = require('express');
 const task = require('./routes/task');
@@ -6,11 +5,6 @@ const user = require('./routes/user');
 const login = require('./routes/login');
 
 const app = express();
-
-// if (!config.get('jwtPrivateKey')) {
-//   console.log('ERROR: jwtPrivateKey is not defined.');
-//   process.exit(1);
-// }
 
 mongoose.connect('mongodb://localhost/task')
   .then(()=> console.log('Connected to MongoDB.'))

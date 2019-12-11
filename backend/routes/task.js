@@ -19,7 +19,7 @@ router.post('/', async (req, res) => {
     user: {
       _id: user._id,
       name: user.name,
-      // lastname: user.lastname,
+      lastname: user.lastname,
       email: user.email
     },
     description: req.body.description, 
