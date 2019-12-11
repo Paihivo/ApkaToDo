@@ -3,9 +3,11 @@ const { Task, validate } = require('../models/task');
 const express = require('express');
 const router = express.Router();
 
-router.get('/', async (req, res) => {
+// filtrowanie tasków dla danego użytkownika
+// http://localhost:3000/api/task/5dec176c53f84a32306f4557/ <- id użytkownika
+router.get('/:id/', async (req, res) => {
   const tasks = await Task.find().sort('-deadline')
-  res.send(tasks)
+  res.send(tasks.filter((task) => task.user._id == req.params.id))
 });
 
 router.post('/', async (req, res) => {
