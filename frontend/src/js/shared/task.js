@@ -14,23 +14,23 @@ export default function taskView() {
                     <ul id="items" class="list-group">
                         <li id="task1" class="list-group-item">
                           <p>Item 1</p>
-                          <button data-task-id="task1" class="button button__edit" data-toggle="modal" data-target="#editModal1"><i class="fas fa-edit" aria-hidden="true"></i></button>
-                          <button data-task-id="task1" class="button button__remove"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                          <button data-task-id="task1" data-btn="edit" data-toggle="modal" data-target="#editModal1"><i class="fas fa-edit" aria-hidden="true"></i></button>
+                          <button data-task-id="task1" data-btn="remove"><i class="fa fa-trash" aria-hidden="true"></i></button>
                         </li>
                         <li id="task2" class="list-group-item">
                           <p>Item 2</p>
-                          <button data-task-id="task2" class="button button__edit" data-toggle="modal" data-target="#editModal2"><i class="fas fa-edit" aria-hidden="true"></i></button>
-                          <button data-task-id="task2" class="button button__remove"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                          <button data-task-id="task2" data-btn="edit" data-toggle="modal" data-target="#editModal2"><i class="fas fa-edit" aria-hidden="true"></i></button>
+                          <button data-task-id="task2" data-btn="remove"><i class="fa fa-trash" aria-hidden="true"></i></button>
                           </li>
                         <li id="task3" class="list-group-item">
                           <p>Item 3</p>
-                          <button data-task-id="task3" class="button button__edit" data-toggle="modal" data-target="#editModal3"><i class="fas fa-edit" aria-hidden="true"></i></button>
-                          <button data-task-id="task3" class="button button__remove"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                          <button data-task-id="task3" data-btn="edit" data-toggle="modal" data-target="#editModal3"><i class="fas fa-edit" aria-hidden="true"></i></button>
+                          <button data-task-id="task3" data-btn="remove"><i class="fa fa-trash" aria-hidden="true"></i></button>
                           </li>
                         <li id="task4" class="list-group-item">
                           <p>Item 4</p>
-                          <button data-task-id="task4" class="button button__edit" data-toggle="modal" data-target="#editModal4"><i class="fas fa-edit" aria-hidden="true"></i></button>
-                          <button data-task-id="task4" class="button button__remove"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                          <button data-task-id="task4" data-btn="edit" data-toggle="modal" data-target="#editModal4"><i class="fas fa-edit" aria-hidden="true"></i></button>
+                          <button data-task-id="task4" data-btn="remove"><i class="fa fa-trash" aria-hidden="true"></i></button>
                         </li>
                     </ul>
                 </div>
@@ -48,7 +48,7 @@ export default function taskView() {
       })
     );
 
-    const buttonEdit = document.querySelectorAll('.button__edit');
+    const buttonEdit = document.querySelectorAll('[data-btn="edit"]');
     buttonEdit.forEach(button =>
       button.addEventListener('click', function() {
         console.log(button.dataset.target);

@@ -1,14 +1,6 @@
 import { editAccount } from './shared/account';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import taskView from './shared/task';
-=======
-import { editTask } from './shared/edit-task';
->>>>>>> Initial task edit modal
-=======
 import { editTask } from './shared/task';
-import taskView from './shared/task';
->>>>>>> Removed edit-task
 
 const init = () => {
   taskView();
