@@ -20,6 +20,7 @@ export default function taskView() {
                     </ul>
                     <form id="addForm" class="form-inline">
                     <input type="text" class="form-control" id="item" value="Add New Task....">
+                    <input type="date" class="form-control" id="item-data" name="deadline">
                     <input type="submit" class="btn btn-dark" value="+">
                     </form>
                 </div>
@@ -29,16 +30,18 @@ export default function taskView() {
         taskContent.innerHTML = taskView;
         taskReg.appendChild(taskContent);
 
-        var form = document.getElementById('addForm');
-        var itemList = document.getElementById('items');
+        const form = document.getElementById('addForm');
+        const itemList = document.getElementById('items');
+        const dateList = document.getElementById('item-data');
 
         function addItem(e) {
             e.preventDefault();
             const newItem = document.getElementById('item').value;
+            const newItemData = dateList.value;
             let li = document.createElement('li');
             li.className = 'list-group-item';
             console.log(li);
-            li.appendChild(document.createTextNode(newItem));
+            li.appendChild(document.createTextNode(`${newItem} Deadline: ${newItemData}`));
             itemList.appendChild(li);
         }
 
