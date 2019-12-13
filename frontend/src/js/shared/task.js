@@ -60,8 +60,9 @@ export default function taskView() {
 
 const editTask = id => {
   console.log(id);
+  const id_modal = id.substring(1,id.length);
   const template = `
-      <div class="modal fade" id="${id}" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
+      <div class="modal fade" id="${id_modal}" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
               <div class="modal-content">
               <div class="modal-header">
