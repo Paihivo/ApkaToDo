@@ -43,7 +43,7 @@ export default function taskView() {
           <form id="addForm" class="form-inline">
             <input type="text" class="form-control" id="item" value="Add New Task....">
             <input type="date" class="form-control" id="item-data" name="deadline">
-            <input type="submit" class="btn btn-dark" value="+">
+            <input type="submit" class="btn btn-dark addBtn" value="+">
           </form>
         </div>
       </div>
