@@ -128,6 +128,12 @@ ul {
 .sign-in-btn:hover{
   background-color: var(--onecolor);
 }
+.form-inline {
+  margin-top: 15px;
+}
+.form-control {
+  margin-right: 15px;
+}
 @media only screen and (max-width: 576px){
   #main-doc{
     margin: 0 5%;
@@ -180,7 +186,14 @@ ul {
     text-align: center;
     height: auto;
   }
+  .form-control {
+    margin: 10px 0;
+  }
+  .addBtn {
+    margin-top: 10px;
+  }
 }
+
 @media only screen and (min-width: 577px) and (max-width: 840px){
   .title-region {
     padding: 40px;
