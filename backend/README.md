@@ -25,6 +25,7 @@
   request query:
   `/api/task?done=false` - all uncompleted tasks
   `/api/task?done=true` - all completed tasks
+  `api/task?date=1542153600` - (insert timestamp) tasks created particular day
 2. POST: `/` do add a task.
     Body raw JSON:
     {
