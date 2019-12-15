@@ -9,11 +9,30 @@ router.get('/', auth, async (req, res) => {
   const tasks = await Task.find().sort('-deadline')
   const userId = [...user._id.id].join()
   const filtered = tasks.filter(task => [...task.user._id.id].join() === userId)
- 
-  if (req.query['done'] == 'true') {res.send(filtered.filter(task => task['done'] == true))}
-  else if (req.query['done'] == 'false') {res.send(filtered.filter(task => task['done'] == false))}
-  else res.send(filtered)
-});
+  
+  if (req.query['done']) {
+    if (req.query['done'] === 'true') {
+      res.send(filtered.filter(task => task['done'] == true))
+    } else if (req.query['done'] == 'false') {
+      res.send(filtered.filter(task => task['done'] == false))
+    } else res.status(400).send('Invalid query')
+  }
+
+  if (req.query['date']) {
+    const tasksByDate = filtered.filter(task => {
+    const month = (task.created.getMonth() + 1);
+    const year = (task.created.getFullYear());
+    const day = (task.created.getDate());
+    const createdDate = `${year}-${month}-${day}`;
+    const time = (Date.parse(new Date(createdDate)) / 1000).toString();
+    return time === req.query['date']
+  })
+    if (tasksByDate == 0) res.send('You don\'t have tasks created that day.')
+    res.send(tasksByDate)
+  }
+  
+  res.send(filtered);
+}); 
 
 router.post('/', auth, async (req, res) => {
 
