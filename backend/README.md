@@ -22,12 +22,35 @@
 ### Endpoints:
 #### task router `/api/task`
 1. GET: `/` to get all tasks.
+  request query:
+  `/api/task?done=false` - all uncompleted tasks
+  `/api/task?done=true` - all completed tasks
 2. POST: `/` do add a task.
     Body raw JSON:
     {
       "description": "<String>",
-      "deadline": "<YYYY-MM-DD>"
+      "deadline": "<YYYY-MM-DD>" //not required
     }
 3. GET: `/:id` to get particular task.
 4. DELETE: `/:id` to delete particular task.
-5. PUT: `/id` to edit particular task.
+5. PUT: `/:id` to edit particular task.
+
+#### user router `/api/user`
+1. GET: `/` to get all users.
+2. POST: `/` do add new user.
+    Body raw JSON:
+    {	
+      "name": "<String>",
+      "lastname": "<String>",
+      "email": "<String>",
+      "password": "<String>"
+    }
+3. GET: `/me` to get actual user.
+4. PUT: `/me` to edit actual user
+    Body raw JSON:
+    {	
+      "name": "<String>",
+      "lastname": "<String>",
+      "email": "<String>",
+      "password": "<String>"
+    }
