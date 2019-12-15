@@ -37,14 +37,16 @@ router.post('/', async (req, res) => {
     .send(_.pick(user, ['_id', 'name', 'lastname', 'email']));
 });
 
-router.put('/:id', auth, async (req, res) => {
+router.put('/me', auth, async (req, res) => {
   const { error } = validate(req.body);
   if (error) return res.status(400).send(error.details[0].message);
 
   const user = await User.findByIdAndUpdate(
-    req.params.id, {
+    req.user._id, {
       name: req.body.name,
-      lastname: req.body.lastname
+      lastname: req.body.lastname,
+      email: req.body.email,
+      password: req.body.password
     }, { new: true }
   );
 

@@ -9,7 +9,10 @@ router.get('/', auth, async (req, res) => {
   const tasks = await Task.find().sort('-deadline')
   const userId = [...user._id.id].join()
   const filtered = tasks.filter(task => [...task.user._id.id].join() === userId)
-  res.send(filtered)
+ 
+  if (req.query['done'] == 'true') {res.send(filtered.filter(task => task['done'] == true))}
+  else if (req.query['done'] == 'false') {res.send(filtered.filter(task => task['done'] == false))}
+  else res.send(filtered)
 });
 
 router.post('/', auth, async (req, res) => {
