@@ -1,5 +1,6 @@
 /* eslint-disable no-shadow */
 import clearRegions from './clear';
+import { postTask } from './addTaskINT';
 
 export default function taskView() {
   const taskBtn = document.querySelector('#taskBtn');
@@ -43,7 +44,7 @@ export default function taskView() {
           <form id="addForm" class="form-inline">
             <input type="text" class="form-control" id="item" value="Add New Task....">
             <input type="date" class="form-control" id="item-data" name="deadline">
-            <input type="submit" class="btn btn-dark addBtn" value="+">
+            <input type="submit" id="addTaskInput" class="btn btn-dark addBtn" value="+">
           </form>
         </div>
       </div>
@@ -77,12 +78,14 @@ export default function taskView() {
     }
 
     if (form) {
-      form.addEventListener('submit', addItem);
+      const obj = {
+        "userId": "5df3d9d0c79e8e1b8c7356a4",
+        "description": "new task 1",
+        "deadline": "2019-12-15",
+      };
+      form.addEventListener('submit',function(){
+        postTask(obj);
+        addItem});
     }
   });
-}
-const obj = {
-  "userId":
-  "description":
-  "deadline":
 }

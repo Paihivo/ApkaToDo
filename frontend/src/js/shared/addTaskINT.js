@@ -10,6 +10,7 @@ export async function postTask(task) {
         method: "POST",
         body: JSON.stringify(task)
       });
+      console.log(res);
     } catch (e) {
       throw Error(e);
     }
